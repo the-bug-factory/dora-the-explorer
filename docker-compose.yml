@@ -21,6 +21,7 @@ services:
   rabbitmq:
       image: rabbitmq:3.8.2-management
       container_name: rabbitmq
+      user: "${USER_ID}:${GROUP_ID}"
       volumes:
         - ./docker/rabbitmq/etc/:/etc/rabbitmq/
         - ./docker/rabbitmq/data/:/var/lib/rabbitmq/

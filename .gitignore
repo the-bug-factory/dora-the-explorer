@@ -1,1 +1,3 @@
 .env
+docker/rabbitmq/data
+docker/rabbitmq/logs
