@@ -14,7 +14,14 @@ services:
     links:
       - php-fpm
 
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+
   php-fpm:
     image: php:7.4-fpm
     volumes:
       - .:/var/www/html
+    links:
+      redis
