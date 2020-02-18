@@ -15,9 +15,9 @@ services:
       - php-fpm
 
   redis:
-    image: redis:alpine
+    image: redis:latest
     ports:
-      - 6379:6379
+      - ${REDIS_PORT}:6379
 
   php-fpm:
     image: php:7.4-fpm
