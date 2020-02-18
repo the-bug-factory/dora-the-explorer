@@ -24,4 +24,4 @@ services:
     volumes:
       - .:/var/www/html
     links:
-      redis
+      - redis
